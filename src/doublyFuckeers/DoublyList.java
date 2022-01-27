@@ -84,8 +84,7 @@ public class DoublyList implements Iterable<String>{
 		return size;
 	}
 	
-	@Override
-	public String toString() {
+	@Override public String toString() {
 		String s = "";
 		Node temp = header.next;
 		while (temp.next != null) {
@@ -96,18 +95,15 @@ public class DoublyList implements Iterable<String>{
 		return s;
 	}
 
-	@Override
-	public Iterator<String> iterator() {
+	@Override public Iterator<String> iterator() {
 		return new Iterator<String>() {
 			int pos = 0;
 			
-			@Override
-			public boolean hasNext() {
+			@Override public boolean hasNext() {
 				return pos <= size;
 			}
 			
-			@Override
-			public String next() {
+			@Override public String next() {
 				return get(pos++);
 			}
 		};
